@@ -1,0 +1,228 @@
+{% extends 'app/base.html' %}
+
+{% block contenido %}
+
+<div class="container">
+    <div class="row">
+        <!-- Elementos generados a partir del JSON -->
+        <main id="items" class="col-sm-8 row"></main>
+        <!-- Carrito -->
+        <aside class="col-sm-4">
+            <h2>Carrito</h2>
+            <!-- Elementos del carrito -->
+            <ul id="carrito" class="list-group"></ul>
+            <hr>
+            <!-- Precio total -->
+            <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+        </aside>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="wrap-title-section" align="center">
+    <h2>Completos</h2>
+</div>
+<div class="column-4 columns">
+    <div style="background:url(../Fotos/Completos-chilenos-shutterstock_691851763.jpg)center;
+        background-size:cover;" class="tarjeta-rest">
+        <div class="wrap-text_tarjeta-rest">
+            <h3>Completo Italiano</h3>
+            <p>
+                Ingredientes:
+                <br>
+                vianesa,palta,tomate,aderesos
+            </p>
+            <div class="cta-wrap_tarjeta-rest">
+                <div class="precio_tarjeta-rest">
+                    <span>$2000</span>
+                </div>
+                <div class="cta_tarjeta-rest">
+                    <a href="">Pedir ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background:url(../Fotos/As-italiano_-la-tia-peta-sushi-sandwichs-scaled-2.jpg)center;
+        background-size:cover;" class="tarjeta-rest">
+        <div class="wrap-text_tarjeta-rest">
+            <h3>ASS-Italiano</h3>
+            <p>
+                Ingredientes:
+                <br>
+                Carne,palta,tomate,aderesos
+            </p>
+            <div class="cta-wrap_tarjeta-rest">
+                <div class="precio_tarjeta-rest">
+                    <span>$4500</span>
+                </div>
+                <div class="cta_tarjeta-rest">
+                    <a href="">Pedir ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background:url(../Fotos/completo-completo.jpg)center;
+        background-size:cover;" class="tarjeta-rest">
+        <div class="wrap-text_tarjeta-rest">
+            <h3>Completo-Completo</h3>
+            <p>
+                Ingredientes:
+                <br>
+                vianesa,tomate,chucrut,aderesos
+                
+            </p>
+            <div class="cta-wrap_tarjeta-rest">
+                <div class="precio_tarjeta-rest">
+                    <span>$3500</span>
+                </div>
+                <div class="cta_tarjeta-rest">
+                    <a href="">Pedir ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="wrap-title-section" align="center">
+    <h2>Sandwiches</h2>
+</div>
+<div class="column-4 columns">
+    <div style="background:url(../Fotos/CAVANCHINO.jpg)center;
+        background-size:cover;" class="tarjeta-rest">
+        <div class="wrap-text_tarjeta-rest">
+            <h3>CAVANCHINO</h3>
+            <p>
+                Ingredientes:
+                <br>
+                Carne,lechuga,cebolla,tomate,aderesos
+            </p>
+            <div class="cta-wrap_tarjeta-rest">
+                <div class="precio_tarjeta-rest">
+                    <span>$10000</span>
+                </div>
+                <div class="cta_tarjeta-rest">
+                    <a href="">Pedir ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background:url(../Fotos/TRUENO\ DE\ THOR\ CON\ PRECIO.png)center;
+        background-size:cover;" class="tarjeta-rest">
+        <div class="wrap-text_tarjeta-rest">
+            <h3>Trueno de thor</h3>
+            <p>
+                Ingredientes:
+                <br>
+                Mechada,choclo,tomate,palta,queso,aderesos
+            </p>
+            <div class="cta-wrap_tarjeta-rest">
+                <div class="precio_tarjeta-rest">
+                    <span>$6000</span>
+                </div>
+                <div class="cta_tarjeta-rest">
+                    <a href="">Pedir ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background:url(../Fotos/VALHALLA\ SIN\ PRECIO.png)center;
+        background-size:cover;" class="tarjeta-rest">
+        <div class="wrap-text_tarjeta-rest">
+            <h3>VALHALLA</h3>
+            <p>
+                Ingredientes:
+                <br>
+                Pollo,tocino,pepinillo,queso,aderesos 
+            </p>
+            <div class="cta-wrap_tarjeta-rest">
+                <div class="precio_tarjeta-rest">
+                    <span>$6500</span>
+                </div>
+                <div class="cta_tarjeta-rest">
+                    <a href="">Pedir ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="wrap-title-section" align="center">
+    <h2>Papas Fritas</h2>
+</div>
+<div class="column-4 columns">
+    <div style="background:url(../Fotos/CHORRILLANA\ top.jpg)center;
+        background-size:cover;" class="tarjeta-rest">
+        <div class="wrap-text_tarjeta-rest">
+            <h3>CHORRILLANA</h3>
+            <p>
+                Ingredientes:
+                <br>
+                Papas,huevo,cebolla,pollo,choriso
+            </p>
+            <div class="cta-wrap_tarjeta-rest">
+                <div class="precio_tarjeta-rest">
+                    <span>$4500</span>
+                </div>
+                <div class="cta_tarjeta-rest">
+                    <a href="">Pedir ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background:url(../Fotos/DSC03280.JPG)center;
+        background-size:cover;" class="tarjeta-rest">
+        <div class="wrap-text_tarjeta-rest">
+            <h3>Papas con Carne</h3>
+            <p>
+                Ingredientes:
+                <br>
+                Papas,Carne,queso,aderesos
+            </p>
+            <div class="cta-wrap_tarjeta-rest">
+                <div class="precio_tarjeta-rest">
+                    <span>$5000</span>
+                </div>
+                <div class="cta_tarjeta-rest">
+                    <a href="">Pedir ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background:url(../Fotos/promo\ vikinga.jpg)center;
+        background-size:cover;" class="tarjeta-rest">
+        <div class="wrap-text_tarjeta-rest">
+            <h3>Vikinga</h3>
+            <p>
+                Ingredientes:
+                <br>
+                Papas,queso,tocino,aderesos
+            </p>
+            <div class="cta-wrap_tarjeta-rest">
+                <div class="precio_tarjeta-rest">
+                    <span>$5500</span>
+                </div>
+                <div class="cta_tarjeta-rest">
+                    <a href="">Pedir ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
