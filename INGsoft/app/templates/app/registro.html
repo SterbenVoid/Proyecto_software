@@ -1,0 +1,33 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Registro</h1>
+    <form action="{% url 'registro' %}" method="POST" id="register">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" name="usuario" class="form-control" maxlength="50" minlength="5" autofocus required id="usuario">
+        </div>
+        <div class="form-group">
+            <label for="genero">Genero</label>
+            <select name="genero">
+                {% for genero in generos  %}
+                    <option value="{{ genero.id_genero }}"> {{ genero.genero }} </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" class="form-control" name="correo" maxlength="200"  autofocus required>
+        </div>
+        <div class="form-group">
+            <label for="password1">Contraseña</label>
+            <input type="password" class="form-control" name="contraseña" maxlength="50" minlength="8" autofocus required>
+        </div>
+        <input type="submit" name="opcion" value="Registrarse" class="btn btn-primary">
+    </form>
+</div>
+
+
+{% endblock %}
