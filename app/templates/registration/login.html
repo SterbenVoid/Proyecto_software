@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="{% static 'css/index.css'%}">
+  <link rel="website icon" type="png"
+  href="{% static 'img/png.png'%}">
+  <title>DeliverEat</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                    <form method="POST">
+                        <h2>Bienvenido</h2>
+                        {% load crispy_forms_tags %} 
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <br>
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    </form>
+                    <div class="register">
+                        <p>No tienes cuenta? <a href="{% url 'register'%}">Registrate</a></p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
