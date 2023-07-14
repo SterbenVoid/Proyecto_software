@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate, login
-
+from .forms import CustomUserCreationForm
+from django.contrib import messages
 # Create your views here.
 
 def register(request):
@@ -14,7 +14,8 @@ def register(request):
             formulario.save()
             user = authenticate(username=formulario.cleaned_data["username"],password=formulario.cleaned_data["password1"])
             login(request,user)
-            return redirect(to="menucarrito")
+            messages.success(request,"Registro completado")
+            return redirect(to="/")
         data["form"]=formulario
     return render(request, 'registration/register.html',data)
 
